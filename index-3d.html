@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="css/reset.css">
+	<style type="text/css">
+	.demo-3d{
+		width: 100px;
+		height: 200px;
+		/*display: inline-block;*/
+		background-color: #f90;
+		border: solid 3px currentColor;
+		margin: 20px auto;
+		line-height: 200px;
+		font-size: 20px;
+		text-align: center;
+		font-family: Helvetica;
+		color: #999;
+		background-image: url('images/anim-bg/p4-2.png');
+		background-size: 100%;
+	}
+
+	#d1{
+		transform:rotateZ(45deg);
+		-ms-transform:rotateZ(45deg); /* IE 9 */
+		-moz-transform:rotateZ(45deg); /* Firefox */
+		-webkit-transform:rotateZ(45deg); /* Safari and Chrome */
+		-o-transform:rotateZ(45deg);  
+	}
+
+	#d2{
+		-webkit-transform: rotate3d(.6,1,.6,45deg);
+		-moz-transform: rotate3d(.6,1,.6,45deg);
+		-ms-transform: rotate3d(.6,1,.6,45deg);
+		transform: rotate3d(.6,1,.6,45deg);
+	}
+
+	#d3{
+		-webkit-transform: scaleX(2);
+		-moz-transform: scaleX(2);
+		-ms-transform: scaleX(2);
+		transform: scaleX(2);
+	} 
+	</style>
+</head>
+<body>
+<div class="demo-3d" id="d1">1</div>
+<div class="demo-3d" id="d2">2</div>
+<div class="demo-3d" id="d3">3</div>
+<div class="demo-3d" id="d4">4</div>
+<div class="demo-3d" id="d5">5</div>
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		var x = 1;
+		var c = 1.08;
+
+		var y = 1;
+		var b = 0.5;
+		for (var i = 1; i <= 30; i++) {
+			x = x*c;
+			y = y*b;
+			console.log(i+":"+x);
+			//console.log(y);
+		};
+
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<style type="text/css">
+	.demo-3d{
+		width: 200px;
+		height: 200px;
+		background-color: #f90;
+		border: solid 3px currentColor;
+		margin: 20px auto;
+		line-height: 200px;
+		font-size: 20px;
+		text-align: center;
+		font-family: Helvetica;
+		color: #999;
+		background-image: url('images/bg/u1.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		/*-webkit-filter:blur(12px);
+  		filter:blur(12px);*/
+	}
+
+	#d1{
+		/*animation:test 5s ease 0s infinite alternate;
+		-webkit-animation:test 5s ease 0s infinite alternate;*/
+	}
+
+	#d1:before{
+		content: "...";
+		animation:testx 1.5s ease 0s infinite alternate;
+		-webkit-animation:testx 1.5s ease 0s infinite alternate;
+	}
+
+	#d1:hover{
+		animation-play-state:paused;
+		-webkit-animation-play-state:paused;
+	}
+	</style>
+</head>
+<body>
+<div class="" id="d1">1</div>
+<div class="demo-3d" id="d2">2</div>
+<div class="demo-3d" id="d3">3</div>
+<div class="demo-3d" id="d4">4</div>
+<div class="demo-3d" id="d5">5</div>
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		
+	})
+</script>
+</body>
+</html>
